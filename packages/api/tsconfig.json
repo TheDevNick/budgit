@@ -1,4 +1,7 @@
 {
   "extends": "@budgit/types/tsconfig.json",
-  "include": ["./src"]
+  "compilerOptions": {
+    "rootDir": "./src"
+  },
+  "include": ["./src", "./**/*.test.ts", "./**/*.spec.ts"]
 }
