@@ -14,7 +14,7 @@ function App(): ReactElement {
   return (
     <div>
       <h1>Testing Turborepo project</h1>
-      <h2>Workspaces</h2>
+      <h2>Existing Workspaces</h2>
       <pre>{JSON.stringify(data, null, 2)}</pre>
     </div>
   );
