@@ -1,0 +1,4 @@
+{
+    "extends": "@budgit/types/tsconfig.json",
+    "include": ["./src"]
+}
