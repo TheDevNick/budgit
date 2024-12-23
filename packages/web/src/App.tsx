@@ -1,5 +1,6 @@
-import { Workspace } from "@budgit/types";
-import { type ReactElement, useEffect, useState } from "react";
+import type { Workspace } from "@budgit/types";
+import type { ReactElement } from "react";
+import { useEffect, useState } from "react";
 
 function App(): ReactElement {
   const [data, setData] = useState<Workspace[]>([]);
