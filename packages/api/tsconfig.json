@@ -3,5 +3,6 @@
   "compilerOptions": {
     "rootDir": "./src"
   },
+  "files": ["global.d.ts"],
   "include": ["./src", "./**/*.test.ts", "./**/*.spec.ts"]
 }
