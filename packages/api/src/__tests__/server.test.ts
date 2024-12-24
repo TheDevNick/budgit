@@ -1,6 +1,6 @@
-import { createServer } from "../server";
-import { describe, it, expect } from "@jest/globals";
+import { faker } from "@faker-js/faker";
 import supertest from "supertest";
+import { createServer } from "../server";
 
 describe("Server", () => {
   it("health check returns 200", async () => {
@@ -8,16 +8,17 @@ describe("Server", () => {
       .get("/status")
       .expect(200)
       .then((res) => {
-        expect(res.ok).toBe(true);
+        expect(res.ok).toBeTrue();
       });
   });
 
   it("message endpoint says hello", async () => {
+    const username = faker.person.firstName;
     await supertest(createServer())
-      .get("/message/jared")
+      .get(`/message/${username}`)
       .expect(200)
       .then((res) => {
-        expect(res.body).toEqual({ message: "hello jared" });
+        expect(res.body).toEqual({ message: `hello ${username}` });
       });
   });
 });

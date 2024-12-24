@@ -6,6 +6,8 @@ const config: Config = {
   transform: {
     "^.+\\.tsx?$": "ts-jest",
   },
+  testEnvironment: "node",
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.ts", "jest-extended/all"],
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
   modulePathIgnorePatterns: [
     "<rootDir>/test/__fixtures__",
